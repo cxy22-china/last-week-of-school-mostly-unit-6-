@@ -323,45 +323,49 @@ void drawtim(float x, float y, float s) {
   pushMatrix();
   translate(x, y);
   scale(s);
-  rotate(random(0, 2*PI));
-  
-  
-  
- 
- 
-  void body (greenish color)
-  fill(ldb);
-  noStroke();
-  ellipse(0, 0, 30, 45);
+  rotate(random(0, TWO_PI));
 
-  //  head
- void head
-  fill(DB);
-  ellipse(0, -25, 30, 35);
-
-  //  eyes
-
-
-void eyes 
-  fill(white);
-  ellipse(-8, -30, 8, 12);
-  ellipse(8, -30, 8, 12);
-
-  // Pupils
-  fill(black);
-  ellipse(-8, -30, 4, 6);
-  ellipse(8, -30, 4, 6);
-
-  //  arms
-  stroke(ldb);
-  strokeWeight(4);
-  line(-15, 10, -25, 25);
-  line(15, 10, 25, 25);
-
-  //  legs
-  
-  line(-10, 20, -10, 35);
-  line(10, 20, 10, 35);
+  drawTimBody();
+  drawTimHead();
+  drawTimEyes();
+  drawTimArms();
+  drawTimLegs();
 
   popMatrix();
 }
+
+void drawTimBody() {
+  fill(ldb);  // Light dark blue (greenish)
+  noStroke();
+  ellipse(0, 0, 30, 45);
+}
+
+void drawTimHead() {
+  fill(DB);  // Dark blue
+  ellipse(0, -25, 30, 35);
+}
+
+void drawTimEyes() {
+  fill(white);
+  ellipse(-8, -30, 8, 12);  // Left eye
+  ellipse(8, -30, 8, 12);   // Right eye
+
+  fill(black);
+  ellipse(-8, -30, 4, 6);   // Left pupil
+  ellipse(8, -30, 4, 6);    // Right pupil
+}
+
+void drawTimArms() {
+  stroke(ldb);
+  strokeWeight(4);
+  line(-15, 10, -25, 25);   // Left arm
+  line(15, 10, 25, 25);     // Right arm
+}
+
+void drawTimLegs() {
+  line(-10, 20, -10, 35);   // Left leg
+  line(10, 20, 10, 35);     // Right leg
+}
+
+
+  //popMatrix();
