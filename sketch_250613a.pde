@@ -22,7 +22,7 @@ int mode = INTRO;
 
 PImage[] gifFrames;
 int gifIndex = 0;
-int frameTotal = 10; // Replace with your actual number of GIF frames
+int frameTotal = 6; // Replace with your actual number of GIF frames
 
 int score = 0;
 int lives = 3;
