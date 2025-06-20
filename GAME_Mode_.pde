@@ -106,15 +106,15 @@ void mousePressed() {
   }
 }
 
-//void keyPressed() {
-//  if (mode == GAME) {
-//    if (key == 'a' || key == 'A') leftPressed = true;
-//    if (key == 'd' || key == 'D') rightPressed = true;
-//  }
-//  if (key == 'p' || key == 'P') mode = PAUSE;
-//}
+void keyPressed() {
+  if (mode == GAME) {
+    if (key == 'a' || key == 'A') leftPressed = true;
+    if (key == 'd' || key == 'D') rightPressed = true;
+  }
+  if (key == 'p' || key == 'P') mode = PAUSE;
+}
 
-//void keyReleased() {
-//  if (key == 'a' || key == 'A') leftPressed = false;
-//  if (key == 'd' || key == 'D') rightPressed = false;
-//}
+void keyReleased() {
+  if (key == 'a' || key == 'A') leftPressed = false;
+  if (key == 'd' || key == 'D') rightPressed = false;
+}
