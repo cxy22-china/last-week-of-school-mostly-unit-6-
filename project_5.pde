@@ -44,12 +44,12 @@ int rightScore = 0;
 // GIF variables
 PImage[] gifFrames;
 int gifIndex = 0;
-int totalFrames = 7; // Adjust if needed
+int totalFrames = 7; 
 
 void setup() {
   size(800, 600);
 
-  int numOfFrames = 10; // Adjust if you have more/less
+  int numOfFrames = 10; 
   gifFrames = new PImage[numOfFrames];
   int i = 0;
   while (i < numOfFrames) {
@@ -209,7 +209,7 @@ void resetGame() {
   rightY = height / 2;
   leftScore = 0;
   rightScore = 0;
-  paddleSpeed = random(2, 8);  // Random paddle speed
+  paddleSpeed = random(2, 8);  
   resetBall();
 }
 
