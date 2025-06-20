@@ -149,7 +149,7 @@ void moveBall() {
     bounce.play();
   }
 
-  checkPaddleCollision();  // Custom collision with circular paddle
+  checkPaddleCollision();  
 
   int r = 0;
   while (r < rows) {
