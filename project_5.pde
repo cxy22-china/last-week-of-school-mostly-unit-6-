@@ -61,7 +61,7 @@ void setup() {
   success = new SoundFile(this, "SUCCESS.wav");
   music = new SoundFile(this, "MUSIC.mp3");
 
-  if (music != null) music.loop();
+  music.loop();
 
   resetGame();
 }
@@ -110,9 +110,8 @@ void gameover() {
   if (fail != null && !fail.isPlaying()) {
     fail.play();
   }
-  if (music != null && music.isPlaying()) {
-    music.stop();
-  }
+  
+  
 }
 
 void game() {
@@ -170,7 +169,7 @@ if (rightY < paddleRadius) {
     float dy = ballY - leftY;
     ballSpeedX = dx / 10;
     ballSpeedY = dy / 10;
-    if (success != null) success.play();
+    success.play();
   }
 
   if (dist(ballX, ballY, width - 50, rightY) < (paddleRadius + ballRadius / 2)) {
@@ -178,7 +177,7 @@ if (rightY < paddleRadius) {
     float dy = ballY - rightY;
     ballSpeedX = dx / 10;
     ballSpeedY = dy / 10;
-    if (success != null) success.play();
+  success.play();
   }
 
   if (ballX < 0) {
@@ -188,7 +187,7 @@ if (rightY < paddleRadius) {
   } else if (ballX > width) {
     leftScore++;
     resetBall();
-    if (success != null) success.play();
+     success.play();
   }
 
   if (leftScore == 3 || rightScore == 3) {
@@ -221,7 +220,7 @@ void mousePressed() {
   } else if (mode == 2) {
     mode = 1;
   } else if (mode == 3) {
-    if (music != null) music.loop();
+    music.loop();
     mode = 0;
   }
 }
